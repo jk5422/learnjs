@@ -1,3 +1,5 @@
+/* Code step by step es6 tutorial */
+
 // var a=10;
 // var a=20;   // allowed
 // console.log(a);
