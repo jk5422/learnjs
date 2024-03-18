@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus event</title>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" placeholder="Enter Your Name" />
+    </form>
+
+    <script>
+        document.querySelector('input[type="text"]').addEventListener('focus', (e) => {
+            e.target.style.background = "pink";
+        });
+
+        window.addEventListener('load', (e) => {
+            document.querySelector('input[type="text"]').style.background = "orange";
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit event</title>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" placeholder="Enter Your name" />
+        <button type="submit">Submit</button>
+    </form>
+    <p id="msg"></p>
+
+    <script>
+        document.getElementById('form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            document.getElementById('msg').innerHTML = `form submitted at : ${event.timeStamp}`;
+        })
+    </script>
+</body>
+
+</html>

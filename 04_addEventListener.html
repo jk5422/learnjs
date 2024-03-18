@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+
+<body>
+    <!-- addEventListener example -->
+    <!-- <p id="demo"></p>
+    <button id="myBtn"> try it </button> -->
+
+    <!-- bubbling and useCapture example -->
+    <div id="mydiv">
+        <h2>bubbling</h2>
+        <p id="myp">Clicked me !</p>
+    </div>
+    <script>
+        /*add eventlistner */
+        // document.getElementById('myBtn').addEventListener('click', () => {
+        //     document.getElementById('demo').innerHTML = Date();
+
+        // });
+
+        document.getElementById('myp').addEventListener('click', () => {
+            alert("You have clicked in p tag..!");
+        }, true) /* if we pass third parameter then work as useCapture where first parent element i.e; div executed after that child element i.e; p executed 
+                by default it is false that time first child execute then parent execute
+        */
+
+        document.getElementById('mydiv').addEventListener('click', () => {
+            alert("You have clicked in div tag..!");
+        }, true)
+
+    </script>
+</body>
+
+</html>

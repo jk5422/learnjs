@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseOver event</title>
+</head>
+
+<body>
+    <ul id="test">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <script>
+        document.getElementById('test').addEventListener('mouseenter', (e) => {
+            e.target.style.color = "purple";
+
+            setTimeout(() => {
+                e.target.style.value = "";
+            }, 500);
+        }, false)
+    </script>
+</body>
+
+</html>
