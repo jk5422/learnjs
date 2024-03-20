@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: steelblue;
+    margin: 80px auto;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: scale(1.5); */
+    /* it will increase height & width with the x and y direction */
+    /* transform: scaleX(1.5) scaleY(2); */
+    /* transform: scaleZ(2); */
+    /* transform: skew(45deg); */
+    /* it will creates and angle with the respect of x-axis*/
+    /* transform: skew(45deg, 20deg); */
+    /* transform:skew(Xdeg,Ydeg) transform in x and y both direction*/
+
+    /* transform: translate(20px, 50px); */
+    /* using this property you can set your element in x & y direction anywhere*/
+    /* transform: translate(50%, 50%); */
+    /*center in x & y*/
+
+    transform: rotate(20deg);
+    /*rotate the element*/
+
+    /* transform: rotateX(20deg); */
+    /*in X direction it will rotate horizontally similar in rotateY rotate vertically*/
+
+    transform-origin: top left;
+    /* from which position we want to transform the element */
+
+
+}
