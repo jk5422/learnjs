@@ -9,10 +9,11 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
+        <!-- <div class="box" id="box-1" onclick="myFunction()">box-1</div> -->
         <div class="box" id="box-1">box-1</div>
         <div class="box random" id="box-2">box-2</div>
-        <div class="box" id="box-3">box-3</div>
+        <div class="box" id="box-3" onmouseover="myFunction()">box-3</div>
         <div class="box" id="box-4">box-4</div>
         <div class="box" id="box-5">box-5</div>
     </div>
@@ -21,6 +22,12 @@
         ipsum dolores ex, enim quod maiores reiciendis accusamus voluptate saepe, temporibus neque, esse sed placeat.
         Temporibus dignissimos voluptate et, laborum fugit reiciendis nisi distinctio molestiae possimus. Pariatur
         numquam molestiae impedit cumque illo tempora eius!</p>
+
+    <form action="#">
+        <!-- <input type="text" placeholder="Enter Your name" id="nameInput" onkeypress="keyPressEvent()"
+            onkeyup="KeyUpEvent()" onkeydown="KeyDownEvent()"> -->
+        <input type="text" placeholder="Enter Your name" id="nameInput">
+    </form>
 
     <script src="./27_dom.js"></script>
 </body>
