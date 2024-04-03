@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data to LocalStorage</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const formObject = {};
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+
+            // Store form data in localStorage
+            localStorage.setItem('formData', JSON.stringify(formObject));
+
+            // Optionally, you can redirect to another page or perform any other actions here
+
+            // For demonstration purposes, let's log the stored data
+            console.log('Form data stored in localStorage:', formObject);
+        });
+    </script>
+</body>
+
+</html>

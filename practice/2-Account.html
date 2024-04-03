@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2-account.css">
+    <title>Account Page</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">Lucent</a></div>
+            <div class="menu-icon">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="tabs">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <button>Login</button>
+                <button>SignUp</button>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+    <!-- welcome form -->
+
+    <section id="welcome-section">
+        <div class="welcomeForm">
+            <div class="title">
+                <h2>Welcome</h2>
+            </div>
+            <div class="form-section">
+                <form id="emailForm">
+                    <div class="welcome-email">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- welcome form -->
+
+
+    <!-- login form -->
+
+    <section id="login-section">
+        <div class="loginForm">
+            <div class="title">
+                <h2>Login</h2>
+            </div>
+            <div class="form-section">
+                <form id="loginForm">
+                    <div class="login-details">
+                        <label for="email">Email:</label>
+                        <input type="email" id="lemail" name="email" readonly required>
+                    </div>
+                    <div class="login-details">
+                        <label for="password">Password:</label>
+                        <input type="password" id="lpassword" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <button type="button" id="logback">Back</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- login form -->
+
+    <!-- signup form -->
+
+    <section id="signup-section">
+        <div class="signupForm">
+            <div class="title">
+                <h2>SignUp</h2>
+            </div>
+            <div class="form-section">
+                <form id="signupForm">
+                    <div class="signup-details">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="signup-details">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="signup-details">
+                        <label for="signupEmail">Email:</label>
+                        <input type="email" id="signupEmail" name="email" readonly required>
+                    </div>
+                    <div class="signup-details">
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+                    <div class="signup-details">
+                        <label for="dob">DOB:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="signup-details">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="signup-details">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="signup-details">
+                        <label for="hobbies">Hobbies:</label>
+                        <input type="text" id="hobbies" name="hobbies" required>
+                    </div>
+                    <div class="signup-details">
+                        <label for="password">Password:</label>
+                        <input type="password" id="spassword" name="password" required>
+                    </div>
+                    <div class="signup-details">
+                        <label for="confirmpassword">Confirm Password:</label>
+                        <input type="password" id="sconfirmpassword" required>
+                    </div>
+                    <button type="submit">Register</button>
+                    <button type="button" id="signupBack">Back</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- signup form -->
+
+</body>
+<script src="./js/2-account.js"></script>
+
+</html>
