@@ -88,7 +88,18 @@
 #profile {
     display: flex;
     flex-direction: column;
+    padding-left: 15px;
 
+}
+
+#profile-section .title {
+    padding: 15px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#profile-section .back {
+    padding: 15px;
 }
 
 .welcomeForm,

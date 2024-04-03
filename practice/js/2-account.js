@@ -109,11 +109,18 @@ document.getElementById('signupForm').addEventListener('submit', (e) => {
         formObject[key] = value;
     });
 
-    console.log("New user added:", formObject);
-    document.getElementById('lemail').value = formObject.email;
-    users.push(formObject);
-    localStorage.setItem('users', JSON.stringify(users));
-    // document.getElementById('signupForm').reset();
-    document.getElementById('login-section').style.display = 'block';
-    document.getElementById('signup-section').style.display = 'none';
+    users = JSON.parse(localStorage.getItem('users'));
+    let res = users.some(element => element.email === formObject.email && element.phone === formObject.phone);
+    if (res) {
+        alert("User Already Exist..!");
+    }
+    else {
+        document.getElementById('lemail').value = formObject.email;
+        users.push(formObject);
+        localStorage.setItem('users', JSON.stringify(users));
+        // document.getElementById('signupForm').reset();
+        document.getElementById('login-section').style.display = 'block';
+        document.getElementById('signup-section').style.display = 'none';
+    }
+
 });
