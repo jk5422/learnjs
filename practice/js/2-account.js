@@ -79,20 +79,15 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
 
         const div = document.createElement('div');
         for (const key in data) {
-            // Skip adding password
             if (key === 'password') continue;
 
-            // Create a p element
             const p = document.createElement('p');
 
-            // Set the text content of the p element to the key and its corresponding value
             p.textContent = `${key}: ${data[key]}`;
 
-            // Append the p element to the div
             div.appendChild(p);
         }
 
-        // Append the div to the container
         container.appendChild(div);
     }
     else {
