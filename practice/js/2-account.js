@@ -44,6 +44,12 @@ document.getElementById('signupBack').addEventListener('click', () => {
     document.getElementById('welcome-section').style.display = 'block';
 });
 
+document.getElementById('profileback').addEventListener('click', () => {
+    document.getElementById('profile-section').style.display = 'none';
+    document.getElementById('welcome-section').style.display = 'block';
+});
+
+
 
 /* forms functionality  */
 
@@ -61,7 +67,33 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
     // console.log(res);
 
     if (res) {
-        alert(`You are authorised user and Login with email: ${formObject.email} \n password: ${formObject.password}`);
+        alert(`You are authorised user and Login with email: ${formObject.email}`);
+
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById('profile-section').style.display = 'block';
+
+        users = JSON.parse(localStorage.getItem('users'));
+        const data = users.find(person => person.email === formObject.email);
+        const container = document.getElementById('profile');
+        container.innerHTML = "";
+
+        const div = document.createElement('div');
+        for (const key in data) {
+            // Skip adding password
+            if (key === 'password') continue;
+
+            // Create a p element
+            const p = document.createElement('p');
+
+            // Set the text content of the p element to the key and its corresponding value
+            p.textContent = `${key}: ${data[key]}`;
+
+            // Append the p element to the div
+            div.appendChild(p);
+        }
+
+        // Append the div to the container
+        container.appendChild(div);
     }
     else {
         alert("You are not authorized user..!");
