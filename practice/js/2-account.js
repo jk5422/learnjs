@@ -113,7 +113,7 @@ document.getElementById('signupForm').addEventListener('submit', (e) => {
         document.getElementById('lemail').value = formObject.email;
         users.push(formObject);
         localStorage.setItem('users', JSON.stringify(users));
-        // document.getElementById('signupForm').reset();
+        document.getElementById('signupForm').reset();
         document.getElementById('login-section').style.display = 'block';
         document.getElementById('signup-section').style.display = 'none';
     }
